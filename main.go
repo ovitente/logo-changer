@@ -150,8 +150,8 @@ func ChangeLogo(logoType string, logoDirName string, logoID string, logoURL stri
 		log.Fatal(err)
 	}
 
-	fmt.Printf("\n------------DEBUG------------\n")
-	PrintConfig(Credentials)
+	// fmt.Printf("\n------------DEBUG------------\n")
+	// PrintConfig(Credentials)
 
 	log.Printf("Changing logo.")
 

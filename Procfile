@@ -1,2 +1,2 @@
- web: bin/logo-changer
+ worker: bin/logo-changer
 
