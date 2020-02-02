@@ -80,7 +80,7 @@ func ReadConfig() (*AppConfig, error) {
 func main() {
 
 	if err := godotenv.Load(); err != nil {
-		log.Print("No .env file found")
+		log.Print("No .env file found. Skipping.")
 	}
 
 	for {
