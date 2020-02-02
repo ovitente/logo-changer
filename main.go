@@ -79,13 +79,21 @@ func ReadConfig() (*AppConfig, error) {
 
 func main() {
 
+	Credentials, err := ReadConfig()
+	if err != nil {
+		log.Fatal(err)
+	}
+
 	if err := godotenv.Load(); err != nil {
 		log.Print("No .env file found. Skipping.")
 	}
 
+	// for i := 0; i < 11; i++ {
 	for {
+
+		// fmt.Printf("%v| WELL WELL WELL \n", i)
 		LogoRandomizer()
-		time.Sleep(60 * time.Second)
+		time.Sleep(time.Duration(Credentials.UpdTimeout) * time.Second)
 	}
 
 	//// DEBUG
@@ -134,14 +142,14 @@ func LogoRandomizer() string {
 		ChangeLogo(logoType, logoDirName, logoID, logoURL)
 
 	case 1:
+		finalChosenLogo = "videos"
+		logoType, logoDirName, logoID, logoURL := ChooseVideo()
+		ChangeLogo(logoType, logoDirName, logoID, logoURL)
+
+	case 2:
 		finalChosenLogo = "info"
 		logoType, logoDirName, logoID, logoURL := ChooseInfo()
 		ChangeLogo(logoType, logoDirName, logoID, logoURL)
-
-		// case 2:
-		//   finalChosenLogo = "info"
-		//   logoType, logoDirName, logoID, logoURL := ChooseInfo()
-		//   ChangeLogo(logoType, logoDirName, logoID, logoURL)
 
 	}
 
