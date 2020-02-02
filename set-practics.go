@@ -17,7 +17,7 @@ func ChoosePractic() (string, string, string, string) {
 	}
 
 	logoType := "practics"
-	var elementsFilePath = "./practics.list"
+	var elementsFilePath = "./list-practics"
 	var elementsList = make([]PairsList, 0)
 
 	elementsFile, err := os.Open(elementsFilePath)

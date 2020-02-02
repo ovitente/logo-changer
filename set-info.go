@@ -17,7 +17,7 @@ func ChooseInfo() (string, string, string, string) {
 	}
 
 	logoType := "info"
-	elementsFilePath := "./info.list"
+	elementsFilePath := "./list-info"
 	elementsList := make([]PairsList, 0)
 
 	elementsFile, err := os.Open(elementsFilePath)

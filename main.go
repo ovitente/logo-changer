@@ -134,7 +134,7 @@ func LogoRandomizer() string {
 
 	var finalChosenLogo string
 
-	switch v := random(0, 2); v {
+	switch v := random(0, 3); v {
 
 	case 0:
 		finalChosenLogo = "videos"
@@ -142,13 +142,13 @@ func LogoRandomizer() string {
 		ChangeLogo(logoType, logoDirName, logoID, logoURL)
 
 	case 1:
-		finalChosenLogo = "videos"
-		logoType, logoDirName, logoID, logoURL := ChooseVideo()
+		finalChosenLogo = "info"
+		logoType, logoDirName, logoID, logoURL := ChooseInfo()
 		ChangeLogo(logoType, logoDirName, logoID, logoURL)
 
 	case 2:
-		finalChosenLogo = "info"
-		logoType, logoDirName, logoID, logoURL := ChooseInfo()
+		finalChosenLogo = "practics"
+		logoType, logoDirName, logoID, logoURL := ChoosePractic()
 		ChangeLogo(logoType, logoDirName, logoID, logoURL)
 
 	}

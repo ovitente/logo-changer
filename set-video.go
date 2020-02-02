@@ -17,7 +17,7 @@ func ChooseVideo() (string, string, string, string) {
 	}
 
 	logoType := "videos"
-	var elementsFilePath = "./videos.list"
+	var elementsFilePath = "./list-videos"
 	var elementsList = make([]PairsList, 0)
 
 	elementsFile, err := os.Open(elementsFilePath)
