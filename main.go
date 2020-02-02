@@ -22,6 +22,7 @@ type Config map[Name]URL
 
 // AppConfig : Init structure for config
 type AppConfig struct {
+	UpdTimeout  int
 	FtpConfig   FtpConfigFields
 	ServerQuery ServerQueryFields
 }
@@ -51,6 +52,11 @@ func PrintConfig(Credentials *AppConfig) {
 func ReadConfig() (*AppConfig, error) {
 	var Credentials = new(AppConfig)
 	var err error
+
+	Credentials.UpdTimeout, err = strconv.Atoi(os.Getenv("LOGO_UPDATE_TIMEOUT"))
+	if err != nil {
+		log.Fatal("Cant assign LOGO_UPDATE_TIMEOUT")
+	}
 
 	Credentials.FtpConfig.Host = os.Getenv("FTP_HOST")
 	Credentials.FtpConfig.Login = os.Getenv("FTP_LOGIN")
@@ -150,8 +156,8 @@ func ChangeLogo(logoType string, logoDirName string, logoID string, logoURL stri
 		log.Fatal(err)
 	}
 
-	fmt.Printf("\n------------DEBUG------------\n")
-	PrintConfig(Credentials)
+	// fmt.Printf("\n------------DEBUG------------\n")
+	// PrintConfig(Credentials)
 
 	log.Printf("Changing logo.")
 
