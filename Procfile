@@ -1,1 +1,1 @@
- worker: cp bin/logo-changer . && ./logo-changer
+ worker: sh heroku-init.sh
