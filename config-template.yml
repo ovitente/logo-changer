@@ -1,0 +1,10 @@
+ftp_host:        "host"
+ftp_user:        "host"
+ftp_password:    "password"
+source_url:      "${ftp_host}"
+
+squery_url:      "host_url"
+squery_port:     "squery_port_number"
+squery_sid:      "8"
+squery_user:     "user"
+squery_password: "password"

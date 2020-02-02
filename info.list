@@ -1,0 +1,8 @@
+- name: admin-contact
+  url: https://t.me/ivan_kostrubin
+
+- name: app-source
+  url: https://github.com/ovitente/logo-changer
+
+- name: ts-tutorial
+  url: https://sites.google.com/view/ts-user-manual/home
