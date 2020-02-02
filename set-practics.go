@@ -8,16 +8,16 @@ import (
 	"gopkg.in/yaml.v2"
 )
 
-// ChooseVideo Reads video list and choosing one pair
-func ChooseVideo() (string, string, string, string) {
+// ChoosePractic Reads video list and choosing one pair
+func ChoosePractic() (string, string, string, string) {
 
 	type PairsList struct {
 		Name string `yaml:"name"`
 		URL  string `yaml:"url"`
 	}
 
-	logoType := "videos"
-	var elementsFilePath = "./videos.list"
+	logoType := "practics"
+	var elementsFilePath = "./practics.list"
 	var elementsList = make([]PairsList, 0)
 
 	elementsFile, err := os.Open(elementsFilePath)

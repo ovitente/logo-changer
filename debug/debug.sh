@@ -5,7 +5,6 @@ export QUOTE="$1"
 export ARGUMENTS=( "$@" )
 echo $MSG[$@]
 echo -e "\nRemoving first argument"
-# array=( "${array[@]/$delete}" )
 delete=($1)
 echo "${ARGUMENTS[@]/$delete}"
 ARGUMENTS=( "${ARGUMENTS[@]/$delete}" )
