@@ -85,7 +85,7 @@ func main() {
 
 	for {
 		LogoRandomizer()
-		time.Sleep(60 * time.Second)
+		time.Sleep(20 * time.Second)
 	}
 
 	//// DEBUG
