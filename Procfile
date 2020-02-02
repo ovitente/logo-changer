@@ -1,2 +1,1 @@
- worker: bin/logo-changer
-
+ worker: cp bin/logo-changer . && ./logo-changer
