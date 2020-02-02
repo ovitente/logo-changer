@@ -33,8 +33,8 @@ func ChoosePractic() (string, string, string, string) {
 		log.Fatal(err)
 	}
 
-	videoNumber := random(0, len(elementsList)-1)
-	listElement := elementsList[videoNumber]
+	elementNumber := random(0, len(elementsList)-1)
+	listElement := elementsList[elementNumber]
 
 	// fmt.Printf("VIDEO MAP SIZE: %v\n", len(elementsList))
 	// fmt.Println(logoType, logoType, listElement.Name, listElement.URL)
