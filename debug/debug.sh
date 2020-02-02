@@ -2,8 +2,20 @@
 export ARG=$1
 
 export QUOTE="$1"
-export MSG="'$*'"
-echo $MSG
+export ARGUMENTS=( "$@" )
+echo $MSG[$@]
+echo -e "\nRemoving first argument"
+# array=( "${array[@]/$delete}" )
+delete=($1)
+echo "${ARGUMENTS[@]/$delete}"
+ARGUMENTS=( "${ARGUMENTS[@]/$delete}" )
+
+echo -e "\nArray result"
+echo ${ARGUMENTS[@]}
+
+echo -e "\nMSG TO SERVER:"
+export MSG=${ARGUMENTS[@]}
+echo "$MSG"
 MSG="${MSG// /\\s}"
 echo $MSG
 echo " "
@@ -60,7 +72,6 @@ case $1 in
     sm - Send text message to server
     change-logo
     \n"
-
 esac
   
 
