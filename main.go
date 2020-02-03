@@ -152,6 +152,11 @@ func LogoRandomizer() string {
 		ChangeLogo(logoType, logoDirName, logoID, logoURL)
 
 		// case 3:
+		// 	finalChosenLogo = "books"
+		// 	logoType, logoDirName, logoID, logoURL := ChooseBook()
+		// 	ChangeLogo(logoType, logoDirName, logoID, logoURL)
+
+		// case 4:
 		// 	finalChosenLogo = "practics"
 		// 	logoType, logoDirName, logoID, logoURL := ChoosePractic()
 		// 	ChangeLogo(logoType, logoDirName, logoID, logoURL)
@@ -160,6 +165,46 @@ func LogoRandomizer() string {
 
 	return finalChosenLogo
 }
+
+// func Priority() {
+// 	package main
+
+// import (
+// 	"fmt"
+// 	"math/rand"
+// 	"time"
+// )
+
+// type Item struct {
+// 	Value  string
+// 	Weight int
+// }
+
+// func main() {
+// 	rand.Seed(time.Now().UnixNano())
+// 	var items = []Item{
+// 		{"foo", 1},
+// 		{"bar", 1},
+// 		{"three", 10},
+// 	}
+// 	fmt.Println(getRandom(items))
+// }
+
+// func getRandom(items []Item) Item {
+// 	set := []int{}
+// 	for k, v := range items {
+// 		for i := 0; i < v.Weight; i++ {
+// 			set = append(set, k)
+// 		}
+// 	}
+// 	fmt.Println(set)
+// 	rindex := rand.Intn(len(set))
+// 	fmt.Println(rindex)
+// 	index := set[rindex]
+// 	return items[index]
+// }
+
+// }
 
 //ChangeLogo Changes logo on the server
 func ChangeLogo(logoType string, logoDirName string, logoID string, logoURL string) {
