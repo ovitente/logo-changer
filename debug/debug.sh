@@ -30,6 +30,7 @@ function GetCredentials {
 }
 
 function ChangeLogo {
+  export QUOTE="$1"
     expect -c '
         spawn telnet $env(SQUERY_URL) $env(SQUERY_PORT)
         send "login $env(SQUERY_USER) $env(SQUERY_PASSWORD)\r\n"
@@ -63,8 +64,8 @@ case $1 in
   "sm")
     SendServerMsg $MSG
     ;;
-  "change-logo")
-    ChangeLogo $1
+  "cn")
+    ChangeLogo $QUOTE
     ;;
   *)
     echo -e "Commands available: \n

@@ -134,7 +134,7 @@ func LogoRandomizer() string {
 
 	var finalChosenLogo string
 
-	switch v := random(0, 5); v {
+	switch v := random(0, 6); v {
 
 	case 0:
 		finalChosenLogo = "videos"
