@@ -1,0 +1,2 @@
+- name: payment_ask
+  url:  https://ruvoice.com/finance/pay?anon&customer_id=36674
