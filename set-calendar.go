@@ -9,15 +9,15 @@ import (
 )
 
 // ChoosePractic Reads video list and choosing one pair
-func ChooseCalendar() (string, string, string, string) {
+func ChooseBook() (string, string, string, string) {
 
 	type PairsList struct {
 		Name string `yaml:"name"`
 		URL  string `yaml:"url"`
 	}
 
-	logoType := "calendar"
-	var elementsFilePath = "./list-calendar"
+	logoType := "books"
+	var elementsFilePath = "./list-books"
 	var elementsList = make([]PairsList, 0)
 
 	elementsFile, err := os.Open(elementsFilePath)
