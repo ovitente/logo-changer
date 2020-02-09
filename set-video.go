@@ -17,26 +17,26 @@ func ChooseVideo() (string, string, string, string) {
 	}
 
 	logoType := "videos"
-	var videosFilePath = "./videos.list"
-	var videosList = make([]PairsList, 0)
+	var elementsFilePath = "./list-videos"
+	var elementsList = make([]PairsList, 0)
 
-	videosFile, err := os.Open(videosFilePath)
+	elementsFile, err := os.Open(elementsFilePath)
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	yamlByte, err := ioutil.ReadAll(videosFile)
+	yamlByte, err := ioutil.ReadAll(elementsFile)
 	if err != nil {
 		log.Fatal(err)
 	}
-	if err = yaml.Unmarshal(yamlByte, &videosList); err != nil {
+	if err = yaml.Unmarshal(yamlByte, &elementsList); err != nil {
 		log.Fatal(err)
 	}
 
-	videoNumber := random(0, len(videosList)-1)
-	listElement := videosList[videoNumber]
+	elementNumber := random(0, len(elementsList)-1)
+	listElement := elementsList[elementNumber]
 
-	// fmt.Printf("VIDEO MAP SIZE: %v\n", len(videosList))
+	// fmt.Printf("VIDEO MAP SIZE: %v\n", len(elementsList))
 	// fmt.Println(logoType, logoType, listElement.Name, listElement.URL)
 
 	return logoType, logoType, listElement.Name, listElement.URL

@@ -8,7 +8,7 @@ import (
 	"gopkg.in/yaml.v2"
 )
 
-// ChooseInfo Reads info list and choosing one pair
+// ChooseInfo Reads elements list and choosing one pair
 func ChooseInfo() (string, string, string, string) {
 
 	type PairsList struct {
@@ -17,28 +17,28 @@ func ChooseInfo() (string, string, string, string) {
 	}
 
 	logoType := "info"
-	infoFilePath := "./info.list"
-	infoList := make([]PairsList, 0)
+	elementsFilePath := "./list-info"
+	elementsList := make([]PairsList, 0)
 
-	infoFile, err := os.Open(infoFilePath)
+	elementsFile, err := os.Open(elementsFilePath)
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	yamlByte, err := ioutil.ReadAll(infoFile)
+	yamlByte, err := ioutil.ReadAll(elementsFile)
 	if err != nil {
 		log.Fatal(err)
 	}
-	if err = yaml.Unmarshal(yamlByte, &infoList); err != nil {
+	if err = yaml.Unmarshal(yamlByte, &elementsList); err != nil {
 		log.Fatal(err)
 	}
 
-	infoNumber := random(0, len(infoList))
-	listElement := infoList[infoNumber]
+	elementsNumber := random(0, len(elementsList))
+	listElement := elementsList[elementsNumber]
 
 	// fmt.Println(logoType, logoType, listElement.Name, listElement.URL)
-	// fmt.Printf("INFO CHOSEN RANDOM NUMBER: %v\n", infoNumber)
-	// fmt.Printf("INFO MAP SIZE: %v\n", len(infoList))
+	// fmt.Printf("INFO CHOSEN RANDOM NUMBER: %v\n", elementsNumber)
+	// fmt.Printf("INFO MAP SIZE: %v\n", len(elementsList))
 
 	return logoType, logoType, listElement.Name, listElement.URL
 }

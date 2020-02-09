@@ -1,0 +1,35 @@
+- name: allatra-partner
+  url:  http://allatra-partner.org/
+
+- name: allatra-radio
+  url:  http://allatra-radio.com/
+
+- name: allatra-science
+  url:  http://allatra-science.org/
+
+- name: allatra-tv
+  url:  http://allatra.tv/
+
+- name: allatra-vesti
+  url:  http://allatravesti.com/
+
+- name: books-i18n
+  url:  http://books.allatra.org/
+
+- name: edinoe-zerno
+  url:  http://edinoezerno.allatra.org/
+
+- name: geocenter
+  url:  http://geocenter.info/
+
+- name: makets
+  url:  http://dobro.allatra.org/
+
+- name: mod-allatra
+  url:  http://allatra.org/
+
+- name: search-through-books
+  url:  http://znai.allatra.tv/
+
+- name: sensei-books
+  url:  http://sensei.org.ua/
