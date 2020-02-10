@@ -176,7 +176,7 @@ func LogoRandomizer() string {
 		logoType, logoDirName, logoID, logoURL := ChoosePayment()
 		ChangeLogo(logoType, logoDirName, logoID, logoURL)
 
-		// case 6:
+		// case 8:
 		// 	finalChosenLogo = "links"
 		// 	logoType, logoDirName, logoID, logoURL := ChooseLink()
 		// 	ChangeLogo(logoType, logoDirName, logoID, logoURL)
