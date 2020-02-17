@@ -130,11 +130,11 @@ func random(min, max int) int {
 }
 
 // LogoRandomizer self explanatory
-func LogoRandomizer() string {
+func LogoRandomizer(string) string {
 
 	var finalChosenLogo string
 
-	switch v := random(0, 8); v {
+	switch v := random(0, 5); v {
 
 	case 0:
 		finalChosenLogo = "videos"
@@ -161,20 +161,10 @@ func LogoRandomizer() string {
 		logoType, logoDirName, logoID, logoURL := ChoosePractic()
 		ChangeLogo(logoType, logoDirName, logoID, logoURL)
 
-	case 5:
-		finalChosenLogo = "payment"
-		logoType, logoDirName, logoID, logoURL := ChoosePayment()
-		ChangeLogo(logoType, logoDirName, logoID, logoURL)
-
-	case 6:
-		finalChosenLogo = "payment"
-		logoType, logoDirName, logoID, logoURL := ChoosePayment()
-		ChangeLogo(logoType, logoDirName, logoID, logoURL)
-
-	case 7:
-		finalChosenLogo = "payment"
-		logoType, logoDirName, logoID, logoURL := ChoosePayment()
-		ChangeLogo(logoType, logoDirName, logoID, logoURL)
+		// case 5:
+		//   finalChosenLogo = "payment"
+		//   logoType, logoDirName, logoID, logoURL := ChoosePayment()
+		//   ChangeLogo(logoType, logoDirName, logoID, logoURL)
 
 		// case 8:
 		// 	finalChosenLogo = "links"
