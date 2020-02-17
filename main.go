@@ -130,7 +130,7 @@ func random(min, max int) int {
 }
 
 // LogoRandomizer self explanatory
-func LogoRandomizer(string) string {
+func LogoRandomizer() string {
 
 	var finalChosenLogo string
 
