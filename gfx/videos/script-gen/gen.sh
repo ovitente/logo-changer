@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # This script resizes images and attaches to it border with text img under it.
 # You have to install imagemagick to be able to use it.
@@ -9,10 +9,12 @@
 # convert -append pravda-zhizni-rdy2.png under-line.png pravda-zhizni-rdy.png
 
 
-SOURCE_DIR=../img-source
-TARGET_DIR=../img-ready
+SOURCE_DIR="../img-source"
+TARGET_DIR="../img-ready"
 
-for i in $(ls); do convert -scale 40% $SOURCE_DIR/$i $TARGET_DIR/$i; done;
-for i in $(ls); do convert $SOURCE_DIR/$i -bordercolor black -border 1 $TARGET_DIR/$i; done;
-for i in $(ls); do convert -append $SOURCE_DIR/$i ../under-line.png $TARGET_DIR/$i; done;
-echo "Done."
+for i in $(ls -1 $SOURCE_DIR); do 
+  echo " - [ $i ]"
+  convert -scale 40% $SOURCE_DIR/$i $TARGET_DIR/$i;
+  convert $TARGET_DIR/$i -bordercolor black -border 1 $TARGET_DIR/$i;
+  convert -append $TARGET_DIR/$i under-line.png $TARGET_DIR/$i;
+done;
