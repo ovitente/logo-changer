@@ -1,5 +1,5 @@
 ![Building App](https://github.com/ovitente/logo-changer/workflows/Building%20App/badge.svg)
-![logok](https://github.com/ovitente/logo-changer/blob/dev/logo.png)
+![logo](logo.png)
 # logo-changer
 Tool for changing banner logo on TeamSpeak3 server by sending command through Telnet.
 
