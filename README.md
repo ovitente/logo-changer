@@ -13,7 +13,7 @@ Tool for changing banner logo on TeamSpeak3 server.
 * You need to have ftp or http server with directly accessible images
 * Create .env file from template inside this repo or export them as env vars. Work in both ways.
 * Run logo-changer.
-* It will randomly look for logos and will look for the same filename like in the `list-*` files, on your image server.
+* It randomly chooses logo by filename from local `list-*` files in this repo, and **both images filenames in list and at your images server must be the same.** Otherwise you will not see desired image by link.
 * Control frequency of changing logo in seconds by live editing env var `LOGO_UPDATE_TIMEOUT=5`.
 
 ### Where can i deploy it?
