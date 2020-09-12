@@ -20,9 +20,3 @@ Tool for changing banner logo on TeamSpeak3 server.
 * For now it is successfully deployed at heroku. I am controlling it through `heroku` cli app, aslo live changing of env vars
 * GCP App Engine
 * Any VPS
-
----
-Debug command:  
-```
-serveredit sid=$env(SQUERY_SID) virtualserver_hostbanner_gfx_url=http://$env(FTP_URL)/quotes/$env(RDY_IMG)\r\n"
-```
