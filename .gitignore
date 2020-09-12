@@ -23,3 +23,5 @@ main
 __debug_bin
 
 heroku-buildpack-go/
+
+.DS_Store
